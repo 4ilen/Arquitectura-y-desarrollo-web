@@ -1,0 +1,26 @@
+#contenedor {
+    width: 700px;
+    margin: 0 auto; 
+}
+
+#cabecera {
+    height: 100px; 
+    background-color: #f0f0f0; 
+    overflow: hidden; 
+}
+
+#cabecera h1 {
+    float: left;
+    margin-right: 20px; 
+}
+
+#logo {
+    float: left; 
+    max-width: 100px; 
+    height: auto; 
+}
+.rojo{
+    color:red;
+}
+
+
