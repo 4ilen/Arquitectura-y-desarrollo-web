@@ -1,0 +1,1 @@
+URL de la noticia original https://www.diarioconvos.com/2024/04/17/la-uca-presento-un-renovado-y-tecnologico-plan-de-estudios-para-ingenieria-agronomica/#google_vignette
