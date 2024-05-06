@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+div.content {
+    padding-top: 0;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1344px;
+    margin: 0 auto; /*de la pantalla*/
+    padding: 15px;
+}
+* { /*el * elimina los margener predeterminados de los elementos segundarios. 
+    Asegura los elementos sec. del elemento d ela clase contenido*/
+    font-family: Bitter, serif;/*??*/
+    margin: 0;
+}
+
+.columnas{
+    margin: 0 auto;
+    max-width: 1116px;
+    grid-template-columns: 1fr 300px;
+    gap: 0;
+}
+.titulo{
+    letter-spacing: -.5px;
+    font-size: 3rem;
+    line-height: 3.375rem;
+    padding-bottom: 10px;
+    font-family: Bitter, serif; /*letra que utiliza*/
+    text-align: center;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.pre-titulo{
+    text-align: center;
+    font-family: "Open Sans", sans-serif; /*letra que utiliza*/
+    color: #00aea8;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: .875rem;
+    line-height: 1.1875rem;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.imagen{
+    margin-top: 0;
+}
+.imagen img{
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
+}
+.info_izquierda{
+    grid-row: 2;
+}
+.post_contenido{
+    float: left;
+    max-width: 774px;
+    width: 100%;
+}
+.contenedor_fecha{
+    margin: 20px 0; /*importante, para el espacio*/
+    padding: 0; /*importante, para el espacio*/
+    float: left;
+    max-width: 774px;
+    width: 100%;
+    padding-top: 20px;
+    grid-template-columns: 1fr;
+}
+.fecha{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    align-items: center;
+}
+.meta_inner_fecha{
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 0;
+    font-size: .875rem;
+    line-height: 1.125rem;
+}
+.post_contenido p{
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding: 15px 0;
+    float: left;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.negrita{
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+}
+.desktop{
+    min-width: 728px;
+    min-height: 90px;
+    max-width: 728px;
+    margin: 0px auto;
+}
+.div-gpt{
+    min-width: 728px;
+    min-height: 90px;
+    max-width: 728px;
+}
+.google_ads{
+    border: 0pt none;
+    display: inline-block;
+    width: 728px;
+    height: 90px;
+}
+iframe{
+    max-width: 100%;
+    width: 728px;
+    height: 90px;
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+}
+figure{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;
+}
+.wp-block{
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin: 15px 0 0 0;
+}
+
+.wp-imagen{
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.wp-block-heading{
+    font-size: 1.375rem;
+    font-weight: 700;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: -.21px;
+    color: #00aea8;
+    margin: 0;
+    padding: 10px 0;
+}
+.wp-block-embed{
+    margin: 20px auto !important;
+}
+.wp-block-embed iframe {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.wp-block-embed__wrapper {
+    position: relative;
+}
+.wp-embedded-content {
+    position: relative !important;
+    width: 600;
+    height: 338;
+}
+.especial{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    color: #00aea8;
+    text-decoration: none;
+}
+.entry-footer{
+    max-width: 774px;
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+}
+.contenedor_bloque_masinfo{
+    border-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.contenedor_bloque_masinfo h3{
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+}
+.contenedor_bloque_listado{
+    border-bottom: 20px;
+    margin-top: .5rem;
+    padding-bottom: 10px;
+}
+.texto_verde{
+    color: #00aea8;
+    padding-right: 5px;
+}
+.noticia_titulo_tag{
+    font-weight: 500;
+    color: #0a32a0;
+    font-family: Bitter, serif;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    text-align: left;
+}
+.noticia__titulo{
+    margin-top: .5rem;
+    text-decoration: none !important; /* Elimina el subrayado */
+    color: inherit;
+}
+.noticia_container{
+    margin-top: 1rem;
+    margin: 0;
+}
+.contenedor_general{
+    border-bottom: 20px;
+    padding-bottom: 30px; /*abajo*/
+    padding-top: 15px;/*arriba*/
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+ul{
+    list-style: none;
+    box-sizing: border-box;
+}
+.tag_slider__tag{
+    background-color: #00aea8;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 10px 5px;
+}
+.tag_slider__tag a{
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none !important; /*elimina subrayado*/
+}
+.listado_noticias--mas_informacion{
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 20px 0 50px 0;
+}
+.footer_contenedor_fluid{
+    padding-top: 10px;
+    margin-top: 0;
+    display: inline-block;
+    width: 100%;
+    scroll-margin-top: 100px;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0 0 20px #00000024;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+}
+.footer__inner_contenedor{
+    display: grid;
+    grid-template-columns: .8fr 1.2fr 1.5fr;
+    gap: 30px;
+    padding-bottom: 0;
+}
+.footer_nav{
+    grid-column: 2;
+}
+.menu-principal-container{
+    border-width: 30px;
+    columns: 2;
+}
+.menu ul, .menu li{
+    display: block;
+    width: 100%;
+    padding-bottom: 6px;
+    padding: 10px 0;
+}
+.menu a{
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+    font-style: normal;
+    font-size: .875rem;
+    line-height: 1.1875rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+.footer_copy{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+}
+.logo2{
+    padding-bottom: 30px;
+    display: block;
+    margin-top: 10px;
+}
+.footer_copy__textos{
+    font-family: "Open Sans", sans-serif;
+    color: #575757;
+    font-size: .875rem;
+    line-height: 1.125rem;
+}
+.preheader_contenedor-fluid{
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+.preheader--container{
+    padding: 10px 15px 0 15px;
+}
+.preheadre__arriba{
+    grid-template-columns: 300px auto 150px 150px;
+    border-bottom: 1px #cacaca solid;
+    padding: 0 0 10px 0;
+    display: grid;
+}
+.clima{
+    height: 50px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+}
+.logo{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    max-width: 362px;
+}
+.clima_fecha{
+    grid-column: span 2;
+    font-size: .875rem;
+    line-height: 1.1875rem;
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+.clima_icono{
+    margin-left: 15px;
+    max-height: 27px;
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+.clima_icono img{
+    margin-left: 15px;
+    max-height: 27px;
+}
+.clima_estado{
+    grid-row: 2;
+    grid-column: 1;
+    font-size: .875rem;
+    line-height: 1.1875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    max-width: 362px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+.logo img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    margin: 0 auto;
+}
