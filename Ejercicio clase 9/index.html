@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparcial</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container_text-center">
+        <div class="fecha"></div>
+
+        <div class="titulo">
+            <div class="titulo_principal">VALIDACIÓN <br> FORMULARIOS</div>
+        </div>
+
+        <div class="contenedor_informacion">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" pattern="[a-zA-Z0-9_]{4,16}" required>
+                        <div class="invalid-feedback">
+                            El usuario tiene que ser de 4 a 16 caracteres y solo puede contener números, letras y guion bajo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="validationCustom01">
+                    <div class="valid-feedback">
+                        ¡Se ve bien!
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="validationCustom03" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom04" class="form-label">Repetir contraseña</label>
+                    <input type="password" class="form-control" id="validationCustom04" required>
+                    <div class="invalid-feedback">
+                        Las contraseñas no coinciden.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+   (function () {
+    'use strict'
+
+    // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Bucle sobre ellos y evitar el envío
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                if (!validatePasswords()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    form.querySelector('#validationCustom04').classList.add('is-invalid');
+                } else {
+                    form.querySelector('#validationCustom04').classList.remove('is-invalid');
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+
+    // Función para validar que las contraseñas sean iguales
+    function validatePasswords() {
+        var password1 = document.getElementById('validationCustom03').value;
+        var password2 = document.getElementById('validationCustom04').value;
+        return password1 === password2;
+    }
+})()
+
+    </script>
+</body>
+</html>

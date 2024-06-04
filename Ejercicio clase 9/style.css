@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Martian+Mono:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.container_text-center{
+    width: 750px;
+    margin-left: 200px;
+    height: 100px;
+}
+.fecha{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px ;
+    margin: 10px ;
+    margin-top: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    opacity: 0.5;
+}
+
+.titulo_principal{
+    border-top: 3px ;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 0px;
+    line-height: 1;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+
+}
+.titulo_secundario{
+    font-style: italic;
+    font-family: 'Gideon Roman', sans-serif;
+    margin-bottom: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.titulo_secundario2{
+    font-style: italic;
+    font-family: 'Gideon Roman', sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-left: 20px; /*Sangria*/
+
+}
+.contenedor_informacion{
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+.contenedor_izquierdo{
+    background-color: darkturquoise;
+    /*width: 700px;*/
+    width: 250px;
+    display: flex;
+    /*height: 50px;*/
+    padding-top: 10px;
+    border-bottom: 4px solid  #FBBC04;
+    flex-direction: column;
+    align-items:  flex-start;
+}
+.contenedor_derecho{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20px;
+
+}
+.cTitulos{
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    border-top: 3px solid  #FBBC04;
+    padding-left: 20px; /*Sangria*/
+    padding-top: 10px; /*altura*/
+    width: 100%; /*que se ajuste al de su contenedor*/
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cTextos{
+     margin-bottom: 20px ;
+     display: flex;
+     align-items: flex-start;
+     width: 250px;
+     padding-top: 0px;
+     font-family: 'Times New Roman', Times, serif;
+     font-style: italic;
+     padding-left: 30px;
+
+}
+
+
+.contenedor_titular{
+    border-top: 3px solid  #FBBC04;
+    width: 100%;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.contenido_titulo{
+   font-size: 15px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding-left: 20px;
+   margin-bottom: 10px;
+   display: flex;
+   text-align: start;
+   margin-top: 20px;
+   font-weight: bold;
+   
+}
+.titular{
+    padding-left: 20px;
+    display: flex;
+    text-align: start;
+}
+
+
+.Final{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 10px 0;
+    margin-top: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    opacity: 0.5;
+}
+
+.cd_titulo{
+    margin-bottom: 20px;
+    margin-top:20px;
+    display: flex;
+    text-align: start;
+    padding-left: 0px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+img{
+    width: 450px;
+    height: 300px;
+    margin-top: 40px;
+}
+.cd_texto{
+    margin-left: 0px;
+    width: 450px; /*ancho*/
+    font-size: 15px;
+
+}
+
+.boton{
+    margin-top: 100px;
+    margin-left: 400px;
+    background-color: #FBBC04; /*color de fondo*/
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 9px; /*tamaño de letra*/
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
