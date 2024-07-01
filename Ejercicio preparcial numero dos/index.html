@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio PreParcial número 2</title>
+    
+    <!--Archivo style-->
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+  <body>
+    <div class="contenedor_general">
+        <div class="contenedor_formulario">
+            <img src="img/img.png" alt="imagen_punto">
+            <div class="contenedor_informacion">
+                <div class="contenedor_texto">
+                    <div class="contenedor_opciones">
+                        <p>Elija la dimensionalidad necesaria:<br></p>
+
+                        <!--Importante: tiene que estar dentro de P-->
+                           <p>Dimensionalidad:
+                            <select id="dimensionalidad" class="form-select">
+                                <option value="2">2</option>
+                                <option value="3">3</opcion>
+                           </select>
+                           </p>
+
+                           <div id="opciones_dim_2" style="display: none;">
+                               <p>Introduzca las coordenadas de puntos.</p>
+                               <!-- Agrega aquí las opciones específicas para dimensionalidad 3 -->
+                               <p>A:(<input type="text" id="coordenadaAX">,<input type="text" id="coordenadaAY">)<br></p>
+                               <p>B:(<input type="text" id="coordenadaBX">,<input type="text" id="coordenadaBY">)</p>
+                               <!--Boton:-->
+                               <button type="button" id="calcular" class="btn btn-primary">Calcular longitud del segmento AB</button>
+                               <!--Para el resultado:-->
+                               <div id="resultado"></div>
+                            </div>
+
+                           <!-- Contenedor dinámico para opciones de dimensionalidad 3 -->
+                            <div id="opciones_dim_3" style="display: none;">
+                               <p>Introduzca las coordenadas de puntos.</p>
+                               <!-- Agrega aquí las opciones específicas para dimensionalidad 3 -->
+                               <p>A:(<input type="text" id="coordenadaAX3">,<input type="text" id="coordenadaAY3">,<input type="text" id="coordenadaAZ3">)<br></p>
+                               <p>B:(<input type="text" id="coordenadaBX3">,<input type="text" id="coordenadaBY3">,<input type="text" id="coordenadaBZ3">)</p>
+                               <!--Boton:-->
+                               <button type="button" id="calcular3" class="btn btn-primary">Calcular longitud del segmento AB</button>
+                               <!--Para el resultado:-->
+                               <div id="resultado3"></div>
+                            </div>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Java Script-->
+    <script>
+        /*Cuando recién inicia:*/
+        var dim = document.getElementById('dimensionalidad').value;
+        
+        if (dim === '3') {
+            document.getElementById('opciones_dim_3').style.display = 'block';
+        } else {
+            document.getElementById('opciones_dim_3').style.display = 'none';
+        }
+        
+        if (dim === '2') {
+            document.getElementById('opciones_dim_2').style.display = 'block';
+        } else {
+            document.getElementById('opciones_dim_2').style.display = 'none';
+        }
+
+        /*Cuando se produce un cambio*/
+        document.getElementById('dimensionalidad').addEventListener('change', function() {
+            var dim = this.value;
+            if (dim === '3') {
+                document.getElementById('opciones_dim_3').style.display = 'block';
+            } else {
+                document.getElementById('opciones_dim_3').style.display = 'none';
+            }
+            if (dim === '2') {
+                document.getElementById('opciones_dim_2').style.display = 'block';
+            } else {
+                document.getElementById('opciones_dim_2').style.display = 'none';
+            }
+        });
+
+        // Cálculo al hacer clic en el botón
+        document.getElementById('calcular').addEventListener('click', function() {
+                var resultado = calcularLongitudAB();
+                if(resultado!=null){
+                    mostrarResultado(resultado,'2'); // para mostrarlo en el form
+                }
+                
+        });
+
+        function calcularLongitudAB() {
+            var x1 = parseFloat(document.getElementById('coordenadaAX').value);
+            var y1 = parseFloat(document.getElementById('coordenadaAY').value);
+            var x2 = parseFloat(document.getElementById('coordenadaBX').value);
+            var y2 = parseFloat(document.getElementById('coordenadaBY').value);
+
+
+
+            // Validación de coordenadas
+            if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) {
+             alert('Error: Debes ingresar valores numéricos en todos los campos.');
+              return null; // Retorna null para indicar que hubo un error
+            }
+
+            // Validación de números
+            if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0) {
+               alert('Error: Las coordenadas no pueden ser menores a 0.');
+               return null; // Retorna null para indicar que hubo un error
+            }
+
+            var distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            return distancia; // Redondeamos a 2 decimales para la longitud
+        }
+
+        document.getElementById('calcular3').addEventListener('click', function() {
+                var resultado = calcularLongitudAB3();
+                
+                if(resultado!=null)
+                {
+                    mostrarResultado(resultado,'3'); // para mostrarlo en el form
+                }
+                
+        });
+
+        function calcularLongitudAB3() {
+            var x1 = parseFloat(document.getElementById('coordenadaAX3').value);
+            var y1 = parseFloat(document.getElementById('coordenadaAY3').value);
+            var z1 = parseFloat(document.getElementById('coordenadaAZ3').value);
+            var x2 = parseFloat(document.getElementById('coordenadaBX3').value);
+            var y2 = parseFloat(document.getElementById('coordenadaBY3').value);
+            var z2 = parseFloat(document.getElementById('coordenadaBZ3').value);
+
+            // Validación de coordenadas
+            if (isNaN(x1) || isNaN(y1) || isNaN(z1) || isNaN(x2) || isNaN(y2) || isNaN(z2)) {
+            alert('Error: Debes ingresar valores numéricos en todos los campos.');
+            return null; // Retorna null para indicar que hubo un error
+            }
+
+            // Validación de números
+            if (x1 < 0 || y1 < 0 || z1 < 0 || x2 < 0 || y2 < 0 || z2 < 0) {
+            alert('Error: Las coordenadas no pueden ser menores a 0.');
+            return null; // Retorna null para indicar que hubo un error
+            }
+
+            var distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2) + Math.pow(z2 - z1, 2));
+            return distancia;
+        }
+
+        // para mostrar el resultado:
+        function mostrarResultado(resultado, tipo) {
+            if(tipo === '2'){
+                document.getElementById('resultado').innerHTML = '<h2>Resultado:</h2><p>' + resultado + '</p>';
+            }
+            if(tipo === '3'){
+                document.getElementById('resultado3').innerHTML = '<h2>Resultado:</h2><p>' + resultado + '</p>';
+            }
+        }
+    </script>
+
+  </body>
+</html>

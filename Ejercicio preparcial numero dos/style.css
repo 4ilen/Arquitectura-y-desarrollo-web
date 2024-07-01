@@ -1,0 +1,35 @@
+.contenedor_general{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.contenedor_formulario{
+    background-color: rgb(203, 199, 199);
+    max-width: 85%;
+}
+.contenedor_informacion{
+    margin-right: 30px;
+}
+.contenedor_texto{
+    padding-top: 5px; /*Arriba*/
+    margin-left: 20px;
+    padding-block: 20px; /*Abajo*/
+}
+/* Ajustar el tamaño de los inputs */
+.contenedor_opciones input[type="text"] {
+    width: 60px; /* Ancho deseado para los inputs */
+    margin: 0 5px; /* Margen horizontal entre los inputs */
+    /*padding: 5px; /* Añadir relleno para mayor espacio alrededor del texto */
+    text-align: center; /*para centrar lo que el usuario ingresa*/
+}
+
+/*Posición del boton*/
+.contenedor_opciones button{
+    margin-left: 280px;
+}
+.contenedor_formulario img{
+    float: right; /* Asegura que la imagen flote hacia la izquierda */
+    margin-right: 30px; 
+    margin-top: 30px;
+    width: 150px; /* Ancho deseado para la imagen */
+    height: 120px; /* Altura automática para mantener la proporción */
+}
